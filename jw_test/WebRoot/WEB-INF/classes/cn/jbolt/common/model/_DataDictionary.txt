@@ -1,0 +1,90 @@
+Table: comment
+---------+---------------+------+-----+-------------------+---------
+ Field   | Type          | Null | Key | Default           | Remarks 
+---------+---------------+------+-----+-------------------+---------
+ id      | INT(10)       | NO   | PRI |                   |         
+ user_id | INT(10)       | YES  |     |                   |         
+ content | VARCHAR(255)  | YES  |     |                   |         
+ time    | TIMESTAMP(19) | YES  |     | CURRENT_TIMESTAMP |         
+---------+---------------+------+-----+-------------------+---------
+
+Table: manager
+---------------+--------------+------+-----+---------+---------
+ Field         | Type         | Null | Key | Default | Remarks 
+---------------+--------------+------+-----+---------+---------
+ id            | INT(10)      | NO   | PRI |         |         
+ username      | VARCHAR(500) | YES  |     |         |         
+ pwd           | VARCHAR(500) | YES  |     |         |         
+ phone         | VARCHAR(50)  | YES  |     |         |         
+ user_icon_src | VARCHAR(255) | YES  |     |         |         
+---------------+--------------+------+-----+---------+---------
+
+Table: order
+------------+---------------+------+-----+-------------------+---------
+ Field      | Type          | Null | Key | Default           | Remarks 
+------------+---------------+------+-----+-------------------+---------
+ id         | INT(10)       | NO   | PRI |                   |         
+ product_id | INT(10)       | YES  |     |                   |         
+ user_id    | INT(10)       | YES  |     |                   |         
+ amount     | INT(10)       | YES  |     |                   |         
+ total      | DOUBLE(22)    | YES  |     |                   |         
+ status     | VARCHAR(255)  | YES  |     |                   |         
+ time       | TIMESTAMP(19) | YES  |     | CURRENT_TIMESTAMP |         
+------------+---------------+------+-----+-------------------+---------
+
+Table: product
+----------+--------------+------+-----+---------+---------
+ Field    | Type         | Null | Key | Default | Remarks 
+----------+--------------+------+-----+---------+---------
+ id       | INT(10)      | NO   | PRI |         |         
+ shop_id  | INT(10)      | YES  |     |         |         
+ name     | VARCHAR(255) | YES  |     |         |         
+ price    | VARCHAR(255) | YES  |     |         |         
+ standard | VARCHAR(255) | YES  |     |         |         
+ intro    | VARCHAR(255) | YES  |     |         |         
+----------+--------------+------+-----+---------+---------
+
+Table: shopping_address
+------------+--------------+------+-----+---------+---------
+ Field      | Type         | Null | Key | Default | Remarks 
+------------+--------------+------+-----+---------+---------
+ id         | INT(10)      | NO   | PRI |         |         
+ user_id    | INT(10)      | YES  |     |         |         
+ location   | VARCHAR(255) | YES  |     |         |         
+ is_default | INT(10)      | YES  |     | 0       |         
+------------+--------------+------+-----+---------+---------
+
+Table: shopping_cart
+------------+---------------+------+-----+-------------------+---------
+ Field      | Type          | Null | Key | Default           | Remarks 
+------------+---------------+------+-----+-------------------+---------
+ id         | INT(10)       | NO   | PRI |                   |         
+ product_id | INT(10)       | YES  |     |                   |         
+ user_id    | INT(10)       | YES  |     |                   |         
+ amount     | INT(10)       | YES  |     |                   |         
+ total      | DOUBLE(22)    | YES  |     |                   |         
+ time       | TIMESTAMP(19) | YES  |     | CURRENT_TIMESTAMP |         
+------------+---------------+------+-----+-------------------+---------
+
+Table: store
+-----------+--------------+------+-----+---------+---------
+ Field     | Type         | Null | Key | Default | Remarks 
+-----------+--------------+------+-----+---------+---------
+ id        | INT(10)      | NO   | PRI |         |         
+ name      | VARCHAR(255) | YES  |     |         |         
+ seller_id | INT(10)      | YES  |     |         |         
+ location  | VARCHAR(255) | YES  |     |         |         
+ score     | DOUBLE(22)   | YES  |     |         |         
+-----------+--------------+------+-----+---------+---------
+
+Table: user
+---------------+--------------+------+-----+---------+---------
+ Field         | Type         | Null | Key | Default | Remarks 
+---------------+--------------+------+-----+---------+---------
+ id            | INT(10)      | NO   | PRI |         |         
+ username      | VARCHAR(255) | YES  |     |         |         
+ pwd           | VARCHAR(255) | YES  |     |         |         
+ phone         | VARCHAR(50)  | YES  |     |         |         
+ user_icon_src | VARCHAR(255) | YES  |     |         |         
+---------------+--------------+------+-----+---------+---------
+
