@@ -1,0 +1,17 @@
+<taglib>
+	<uri>http://localhost:8080/mytag/hello</uri>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>f</short-name>	
+	<tag>
+        <name>lwc</name>
+        <tag-class>mytag.nameTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <rtextprvalue>true</rtextprvalue>
+        </attribute>
+    </tag>
+    
+</taglib>
